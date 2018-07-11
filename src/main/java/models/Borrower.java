@@ -1,5 +1,6 @@
 package models;
 
+import javax.persistence.*;
 import java.util.Set;
 
 @Entity
@@ -15,6 +16,9 @@ public class Borrower {
         this.itemsBorrowed = itemsBorrowed;
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     public int getId() {
         return id;
     }
@@ -25,7 +29,7 @@ public class Borrower {
 
 
 
-
+    @Column(name = "name")
     public String getName() {
         return name;
     }
@@ -36,7 +40,7 @@ public class Borrower {
 
 
 
-
+    @OneToMany(mappedBy = "currentBorrower", fetch = FetchType.LAZY)
     public Set<Book> getItemsBorrowed() {
         return itemsBorrowed;
     }
