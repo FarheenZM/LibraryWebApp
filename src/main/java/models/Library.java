@@ -2,7 +2,6 @@ package models;
 
 
 import javax.persistence.*;
-
 import java.util.HashSet;
 import java.util.Set;
 
@@ -15,6 +14,7 @@ public class Library {
     private Set<Book> books;
 
     public Library() {
+
         this.borrowers = new HashSet<Borrower>();
         this.books = new HashSet<Book>();
     }
