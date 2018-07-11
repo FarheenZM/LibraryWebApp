@@ -1,5 +1,8 @@
 package models;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Library {
 
     private int id;
@@ -7,7 +10,7 @@ public class Library {
 
     public Library() {
         this.id = id;
-        this.borrowers= new Set<Borrower>();
+        this.borrowers= new HashSet<Borrower>();
     }
 
     public int getId() {
@@ -25,4 +28,6 @@ public class Library {
     public void setBorrowers(Set<Borrower> borrowers) {
         this.borrowers = borrowers;
     }
+
+
 }
