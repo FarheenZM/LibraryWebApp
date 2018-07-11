@@ -1,5 +1,7 @@
 package models;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.util.Set;
 
 @Entity
