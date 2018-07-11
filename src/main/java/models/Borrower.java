@@ -1,5 +1,6 @@
 package models;
 
+
 import javax.persistence.*;
 import java.util.Set;
 
@@ -48,4 +49,5 @@ public class Borrower {
     public void setItemsBorrowed(Set<Book> itemsBorrowed) {
         this.itemsBorrowed = itemsBorrowed;
     }
+
 }
